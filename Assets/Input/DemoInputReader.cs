@@ -21,5 +21,17 @@ public class DemoInputReader : MonoBehaviour
         {
             inputChannel?.RaiseEvent("W");
         }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            inputChannel?.RaiseEvent("S");
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            inputChannel?.RaiseEvent("A");
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            inputChannel?.RaiseEvent("D");
+        }
     }
 }

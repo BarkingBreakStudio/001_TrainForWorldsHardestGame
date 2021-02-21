@@ -861,6 +861,7 @@ GameObject:
   - component: {fileID: 600764557}
   - component: {fileID: 600764558}
   - component: {fileID: 600764559}
+  - component: {fileID: 600764560}
   m_Layer: 0
   m_Name: GameInputListenner
   m_TagString: Untagged
@@ -901,7 +902,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600764555}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e9e029907258d446a314d3836ddbd32, type: 3}
   m_Name: 
@@ -914,12 +915,41 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600764555}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4fb493ae3051cd8449b0e7180840246f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _channel: {fileID: 11400000, guid: f0ec432927d377448bf346eae9a69c12, type: 2}
+--- !u!114 &600764560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600764555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9702813eb70fc49adb6961c02ab940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _channel: {fileID: 11400000, guid: f0ec432927d377448bf346eae9a69c12, type: 2}
+  OnEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 600764557}
+        m_TargetAssemblyTypeName: DbgConsole, Assembly-CSharp
+        m_MethodName: DebugLog
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  RegexFilter: 
 --- !u!1 &625886595
 GameObject:
   m_ObjectHideFlags: 0
