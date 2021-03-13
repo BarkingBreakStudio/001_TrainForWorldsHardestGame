@@ -36,4 +36,12 @@ public class GameObjectSpawner : MonoBehaviour
         GameObject gobj = objects2Spawn[Random.Range(0, objects2Spawn.Count)];
         Instantiate<GameObject>(gobj, position, Quaternion.identity, transform);
     }
+
+    public void SpawnUpTo(int amount)
+    {
+        while(transform.childCount < amount)
+        {
+            SpawnRandomObject();
+        }
+    }
 }

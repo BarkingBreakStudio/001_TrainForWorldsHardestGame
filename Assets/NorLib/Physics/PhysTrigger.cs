@@ -8,7 +8,9 @@ public class PhysTrigger : MonoBehaviour
 {
 
     public UnityEvent EvtTriggerEnter;
+    public UnityEvent<GameObject> EvtTriggerEnterGo;
     public UnityEvent EvtTriggerLeave;
+    public UnityEvent<GameObject> EvtTriggerLeaveGo;
 
     public List<string> TagFilter = new List<string>();
 
@@ -29,6 +31,7 @@ public class PhysTrigger : MonoBehaviour
         if (TagFilter.Count == 0 || other.CompareTags(TagFilter))
         {
             EvtTriggerEnter.Invoke();
+            EvtTriggerEnterGo.Invoke(other.gameObject);
         }
     }
 
@@ -37,6 +40,7 @@ public class PhysTrigger : MonoBehaviour
         if (TagFilter.Count == 0 || other.CompareTags(TagFilter))
         {
             EvtTriggerLeave.Invoke();
+            EvtTriggerLeaveGo.Invoke(other.gameObject);
         }
     }
 }

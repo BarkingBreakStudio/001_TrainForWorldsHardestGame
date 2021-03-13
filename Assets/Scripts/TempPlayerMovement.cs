@@ -37,6 +37,16 @@ public class TempPlayerMovement : MonoBehaviour
 
         moveDir.Normalize();
         moveDir.y = 0;
-        transform.position += moveDir * Time.deltaTime * speed;
+
+        var rb = GetComponent<Rigidbody>();
+        if(rb)
+        {
+            rb.velocity = moveDir * speed;
+        }
+        else 
+        {
+            transform.position += moveDir * Time.deltaTime * speed;
+        }
+        
     }
 }
