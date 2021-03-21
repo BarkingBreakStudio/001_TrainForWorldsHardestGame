@@ -8,4 +8,9 @@ public class DbgConsole : MonoBehaviour
     {
         Debug.Log(msg);
     }
+
+    public void DebugLog(string msg)
+    {
+        Debug.Log(msg);
+    }
 }

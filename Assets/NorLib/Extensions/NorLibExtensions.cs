@@ -10,4 +10,9 @@ public static class NorLibExtensions
     {
         return tags.Contains(component.tag);
     }
+
+    public static bool CompareTags(this GameObject gameObject, IEnumerable<string> tags)
+    {
+        return tags.Contains(gameObject.tag);
+    }
 }

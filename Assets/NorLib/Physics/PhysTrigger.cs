@@ -7,10 +7,10 @@ using UnityEngine.Events;
 public class PhysTrigger : MonoBehaviour
 {
 
-    public UnityEvent EvtTriggerEnter;
-    public UnityEvent<GameObject> EvtTriggerEnterGo;
-    public UnityEvent EvtTriggerLeave;
-    public UnityEvent<GameObject> EvtTriggerLeaveGo;
+    public UnityEvent EvtColliderEnter;
+    public UnityEvent<GameObject> EvtColliderEnterGo;
+    public UnityEvent EvtColliderLeave;
+    public UnityEvent<GameObject> EvtColliderLeaveGo;
 
     public List<string> TagFilter = new List<string>();
 
@@ -28,19 +28,39 @@ public class PhysTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (TagFilter.Count == 0 || other.CompareTags(TagFilter))
-        {
-            EvtTriggerEnter.Invoke();
-            EvtTriggerEnterGo.Invoke(other.gameObject);
-        }
+        EnterCollider(other.gameObject);
     }
 
     private void OnTriggerExit(Collider other)
     {
+        ExitCollider(other.gameObject);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        EnterCollider(collision.gameObject);
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        ExitCollider(collision.gameObject);
+    }
+
+    private void EnterCollider(GameObject other)
+    {
+        if (TagFilter.Count == 0 || other .CompareTags(TagFilter))
+        {
+            EvtColliderEnter.Invoke();
+            EvtColliderEnterGo.Invoke(other.gameObject);
+        }
+    }
+
+    private void ExitCollider(GameObject other)
+    {
         if (TagFilter.Count == 0 || other.CompareTags(TagFilter))
         {
-            EvtTriggerLeave.Invoke();
-            EvtTriggerLeaveGo.Invoke(other.gameObject);
+            EvtColliderLeave.Invoke();
+            EvtColliderLeaveGo.Invoke(other.gameObject);
         }
     }
 }
