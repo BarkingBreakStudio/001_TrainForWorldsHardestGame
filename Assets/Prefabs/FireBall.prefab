@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2564917453266975615}
   - component: {fileID: 1393487466947609978}
   - component: {fileID: 4211167084232335508}
+  - component: {fileID: 2316037806491089156}
+  - component: {fileID: 2767192553898177708}
   m_Layer: 0
   m_Name: FireBall
   m_TagString: FireBall
@@ -91,7 +93,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6182723611745395170}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -112,3 +114,56 @@ MonoBehaviour:
   MoveSpeed: 10
   RotateDirection: {x: 0, y: 0, z: 0}
   RotateSpeed: 1
+--- !u!114 &2316037806491089156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6182723611745395170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e0350bbd3db0bd43a8cde4bdfe4e676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EvtColliderEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2767192553898177708}
+        m_TargetAssemblyTypeName: BaseEventTransmitter`2[[BaseEventChannelSO`1[[System.String,
+          mscorlib
+        m_MethodName: TransmitEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: FireBall
+          m_BoolArgument: 0
+        m_CallState: 2
+  EvtColliderEnterGo:
+    m_PersistentCalls:
+      m_Calls: []
+  EvtColliderLeave:
+    m_PersistentCalls:
+      m_Calls: []
+  EvtColliderLeaveGo:
+    m_PersistentCalls:
+      m_Calls: []
+  TagFilter:
+  - Player
+--- !u!114 &2767192553898177708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6182723611745395170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0e9ed368fb5bfe4f8d3c94fdc1bef67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: {fileID: 11400000, guid: 45b4fe723e45dd848859f53f7e27e8cf, type: 2}
+  defaultObject: FireBall
