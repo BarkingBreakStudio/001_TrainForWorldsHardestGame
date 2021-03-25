@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TheEasiestGame_lv1.unity
+    guid: eef9704ffdcc90947b7025a82148508e
+  - enabled: 1
+    path: Assets/Scenes/TheEasiestGame_lv2.unity
+    guid: 18d362b9f67735b4a8960269ac7b716c
   m_configObjects: {}

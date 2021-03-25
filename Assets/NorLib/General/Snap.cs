@@ -14,7 +14,7 @@ public class Snap : MonoBehaviour
     [SerializeField]
     Vector3 gridSize;
     [SerializeField]
-    bool SnapWithGlobalPosition = true;
+    bool SnapRelativeToParent = true;
     [SerializeField]
     bool deactivateInPlayMode = true;
 
@@ -47,15 +47,15 @@ public class Snap : MonoBehaviour
 
     void SnapToGrid()
     {
-        Vector3 pos = SnapWithGlobalPosition ? transform.position : transform.localPosition;
+        Vector3 pos = SnapRelativeToParent ? transform.localPosition : transform.position;
         Vector3 grid = GridSize;
         oldGridSize = GridSize;
         old_useGlobalGrid = useGlobalGrid;
         Vector3 newPosition = Vector3.Scale(grid , new Vector3(Mathf.Round(pos.x / grid.x), Mathf.Round(pos.y / grid.y), Mathf.Round(pos.z / grid.z)));
-        if (SnapWithGlobalPosition)
-            transform.position = newPosition;
-        else
+        if (SnapRelativeToParent)
             transform.localPosition = newPosition;
+        else
+            transform.position = newPosition;
 
         gridSize = GridSize;
     }
@@ -66,10 +66,13 @@ public class Snap : MonoBehaviour
         get => useGlobalGrid ? GlobalGridSize : localGridSize;
         set
         {
-            if (useGlobalGrid)
-                GlobalGridSize = value;
-            else
-                localGridSize = value;
+            if (value.x > 0.00001 && value.y > 0.00001 && value.z > 0.00001)
+            {
+                if (useGlobalGrid)
+                    GlobalGridSize = value;
+                else
+                    localGridSize = value;
+            }
         }
     }
 
