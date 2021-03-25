@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/TheEasiestGame_Menu.unity
+    guid: 305ce5ea5bea25d4c954ecaa41eff168
+  - enabled: 1
+    path: Assets/Scenes/TheEasiestGame_Persistent.unity
+    guid: 9702964a6caa5ff4bb29b8ed9ed5f8d7
+  - enabled: 1
     path: Assets/Scenes/TheEasiestGame_lv1.unity
     guid: eef9704ffdcc90947b7025a82148508e
   - enabled: 1
