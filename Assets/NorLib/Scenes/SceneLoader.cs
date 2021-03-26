@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,26 @@ public class SceneLoader : MonoBehaviour
 
     public SceneInitializerSO SceneInitSettings;
 
+    public SceneLoaderSO SceneLoaderRequestChannel;
+    private SceneLoaderEventListener SceneLoaderListerner;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        var slel = gameObject.AddComponent<SceneLoaderEventListener>();
+        slel.OnEventRaised.AddListener(onLoaderReqest);
+        slel.SetChannel(SceneLoaderRequestChannel);
+    }
+
+    private void onLoaderReqest(SceneLoaderSO.SceneLoaderReqest request)
+    {
+        switch (request.reqType)
+        {
+            case SceneLoaderSO.ReqType.loadScene:
+                LoadScene(request.scene);
+            break;
+        }
     }
 
     // Update is called once per frame
@@ -21,6 +37,7 @@ public class SceneLoader : MonoBehaviour
         
     }
 
+
     public void LoadScene(string sceneName)
     {
         List<string> ScenesToDesroy = new List<string>();
@@ -28,7 +45,7 @@ public class SceneLoader : MonoBehaviour
         for (int i = 0; i < SceneManager.sceneCount; i++)
         {
             Scene curScene = SceneManager.GetSceneAt(i);
-            if(curScene.path != ("Assets/" + SceneInitSettings.PersistentScene + ".unity"))
+            if(curScene.path != SceneInitSettings.PersistentScene)
             {
                 ScenesToDesroy.Add(curScene.name);
             }
@@ -36,7 +53,7 @@ public class SceneLoader : MonoBehaviour
 
         foreach (var scene in ScenesToDesroy)
         {
-            SceneManager.UnloadScene(scene);
+            SceneManager.UnloadSceneAsync(scene);
         }
 
         SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);

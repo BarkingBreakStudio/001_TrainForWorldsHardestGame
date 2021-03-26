@@ -1,67 +1,48 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
+
+
 [CustomPropertyDrawer(typeof(SceneNamePicker))]
 public class SceneNamePickerPropertyDrawer : PropertyDrawer
 {
     private int selectedIndex;
 
+
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
-        property.serializedObject.Update();
-
         SceneNamePicker picker = (SceneNamePicker)attribute;
-        string currentSceneName = property.stringValue;
 
-        string[] validSceneNames = GetValidSceneNames(picker.showPath);
-
-        if (IsValidSceneName(currentSceneName, picker.showPath))
-        {
-            selectedIndex = validSceneNames.ToList().IndexOf(currentSceneName);
-        }
-
-        selectedIndex = EditorGUI.Popup(position, property.displayName, selectedIndex, validSceneNames);
+        List<string> validSceneNames = GetValidSceneNames(picker.showPath);
+        int selectedIndex = Mathf.Max(validSceneNames.ToList().IndexOf(property.stringValue), 0);
+        selectedIndex = EditorGUI.Popup(position, property.displayName, selectedIndex, ToSceneDisplayString(validSceneNames));
         property.stringValue = validSceneNames[selectedIndex];
 
-        property.serializedObject.ApplyModifiedProperties();
     }
 
-    private string[] GetValidSceneNames(bool includePath)
+    private List<string> GetValidSceneNames(bool includePath)
     {
         EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
-        string[] sceneNames = EditorBuildSettingsScene.GetActiveSceneList(scenes);
-
-        for (int i = 0; i < sceneNames.Length; i++)
-        {
-            if (includePath)
-            {
-                sceneNames[i] = sceneNames[i].Replace("Assets/", "");
-                sceneNames[i] = sceneNames[i].Replace(".unity", "");
-            }
-            else
-            {
-                sceneNames[i] = AssetDatabase.LoadAssetAtPath<SceneAsset>(sceneNames[i]).name;
-            }
-        }
-
+        List<string> sceneNames = new List<string>(new string[] { "undefined" });
+        sceneNames.AddRange(EditorBuildSettingsScene.GetActiveSceneList(scenes));
         return sceneNames;
     }
 
-    private bool IsValidSceneName(string sceneName, bool includePath)
+    private string[] ToSceneDisplayString(List<string> paths)
     {
-        string[] sceneNames = GetValidSceneNames(includePath);
+        var displaNames = new List<string>();
 
-        for (int i = 0; i < sceneNames.Length; i++)
+        foreach (var path in paths)
         {
-            if (sceneName == sceneNames[i])
-            {
-                return true;
-            }
+            string sTrim = path.TrimEnd(".unity");
+            sTrim = sTrim.TrimStart("Assets/");
+            displaNames.Add(sTrim);
         }
 
-        return false;
+        return displaNames.ToArray();
     }
 }

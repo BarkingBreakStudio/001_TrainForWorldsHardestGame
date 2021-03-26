@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 421f24e041b4ec64a8654d0f38398ae0, type: 3}
-  m_Name: SceneInitSettings
+  m_Script: {fileID: 11500000, guid: 64f65242c32a8764fa994fd8e4842547, type: 3}
+  m_Name: BasicSceneLoaderReqChannel
   m_EditorClassIdentifier: 
-  PersistentScene: Assets/Scenes/TheEasiestGame_Persistent.unity
+  description: 

@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneInitSettings: {fileID: 11400000, guid: 55f44a77348874a49960d6bf6d304327, type: 2}
+  SceneLoaderRequestChannel: {fileID: 11400000, guid: 5044ccdf5fb5a0146ace2dd3bda1811c, type: 2}
 --- !u!4 &578482122
 Transform:
   m_ObjectHideFlags: 0

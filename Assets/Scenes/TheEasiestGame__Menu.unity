@@ -374,6 +374,7 @@ GameObject:
   - component: {fileID: 1369009722}
   - component: {fileID: 1369009721}
   - component: {fileID: 1369009720}
+  - component: {fileID: 1369009724}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -413,7 +414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 313cae24c3f74d34792c35e0d5a8e4da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultSceneParamter: Scenes/TheEasiestGame_lv1
+  DefaultSceneParamter: undefined
 --- !u!114 &1369009721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,9 +459,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1369009720}
-        m_TargetAssemblyTypeName: SceneManagerEx, Assembly-CSharp
-        m_MethodName: LoadSceneAdditive
+      - m_Target: {fileID: 1369009724}
+        m_TargetAssemblyTypeName: BaseEventTransmitter`2[[BaseEventChannelSO`1[[SceneLoaderSO+SceneLoaderReqest,
+          Assembly-CSharp
+        m_MethodName: TransmitEvent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -508,6 +510,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369009718}
   m_CullTransparentMesh: 1
+--- !u!114 &1369009724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369009718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc9b4652a67497442809dcb6c3503f50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: {fileID: 11400000, guid: 5044ccdf5fb5a0146ace2dd3bda1811c, type: 2}
+  defaultObject:
+    scene: Assets/Scenes/TheEasiestGame_lv1.unity
+    reqType: 0
 --- !u!1 &1477255976
 GameObject:
   m_ObjectHideFlags: 0

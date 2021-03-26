@@ -8500,7 +8500,6 @@ GameObject:
   - component: {fileID: 1970406558}
   - component: {fileID: 1970406557}
   - component: {fileID: 1970406556}
-  - component: {fileID: 1970406555}
   - component: {fileID: 1970406561}
   m_Layer: 6
   m_Name: Goal
@@ -8509,20 +8508,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1970406555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1970406554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0e9ed368fb5bfe4f8d3c94fdc1bef67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  channel: {fileID: 11400000, guid: 50dec7b6ffb0a1d45ae88093c775ab64, type: 2}
-  defaultObject: 
 --- !u!114 &1970406556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8538,22 +8523,10 @@ MonoBehaviour:
   EvtColliderEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1970406555}
-        m_TargetAssemblyTypeName: BaseEventTransmitter`2[[BaseEventChannelSO`1[[System.String,
-          mscorlib
-        m_MethodName: TransmitEvent
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: goal
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1970406561}
-        m_TargetAssemblyTypeName: SceneManagerEx, Assembly-CSharp
-        m_MethodName: LoadNextScene
+        m_TargetAssemblyTypeName: BaseEventTransmitter`2[[BaseEventChannelSO`1[[SceneLoaderSO+SceneLoaderReqest,
+          Assembly-CSharp
+        m_MethodName: TransmitEvent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8658,10 +8631,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1970406554}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 313cae24c3f74d34792c35e0d5a8e4da, type: 3}
+  m_Script: {fileID: 11500000, guid: fc9b4652a67497442809dcb6c3503f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultSceneParamter: 
+  channel: {fileID: 11400000, guid: 5044ccdf5fb5a0146ace2dd3bda1811c, type: 2}
+  defaultObject:
+    scene: Assets/Scenes/TheEasiestGame_lv2.unity
+    reqType: 0
 --- !u!1 &2006624220
 GameObject:
   m_ObjectHideFlags: 0
