@@ -86,7 +86,7 @@ public class Snap : MonoBehaviour
             }
             else
             {
-                string data = UnityEditor.EditorPrefs.GetString("globalGridSize", "");
+                /*string data = UnityEditor.EditorPrefs.GetString("globalGridSize", "");
                 if(data != "")
                 {
                     s_globalGridSize = JsonUtility.FromJson<Vector3>(data);
@@ -95,7 +95,8 @@ public class Snap : MonoBehaviour
                 {
                     s_globalGridSize = Vector3.one;
                 }
-                return s_globalGridSize.Value;
+                return s_globalGridSize.Value;*/
+                return Vector3.one;
             }
         }
         set
@@ -103,7 +104,7 @@ public class Snap : MonoBehaviour
             if(value != s_globalGridSize)
             {
                 s_globalGridSize = value;
-                UnityEditor.EditorPrefs.SetString("globalGridSize", JsonUtility.ToJson(s_globalGridSize));
+                //UnityEditor.EditorPrefs.SetString("globalGridSize", JsonUtility.ToJson(s_globalGridSize));
             }
         }
     }

@@ -2,19 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneInitializer : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public SceneInitializerSO SceneInitSettings;
+
     void Awake()
     {
-        string[] assetNames = AssetDatabase.FindAssets("t:SceneInitializerSO");
-        foreach (string SOName in assetNames)
+        if (SceneInitSettings != null && !SceneManagerEx.IsSceneLoaded(SceneInitSettings.PersistentScene))
         {
-            var SOpath = AssetDatabase.GUIDToAssetPath(SOName);
-            var asset = AssetDatabase.LoadAssetAtPath<SceneInitializerSO>(SOpath);
-            SceneManagerEx.LoadSceneAdditive(asset.PersistentScene);
+            SceneManager.LoadScene(SceneInitSettings.PersistentScene,LoadSceneMode.Additive);
         }
     }
-
 }

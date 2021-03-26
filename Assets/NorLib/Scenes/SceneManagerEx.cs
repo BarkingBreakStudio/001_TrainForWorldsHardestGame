@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 public class SceneManagerEx : MonoBehaviour
 {
 
+    [SceneNamePicker]
+    public string DefaultSceneParamter;
+
     public static void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -17,21 +20,27 @@ public class SceneManagerEx : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public static void LoadScene(SceneAsset scene)
+    public static void LoadScene(Scene scene)
     {
         SceneManager.LoadScene(scene.name);
     }
 
-    public static void LoadSceneAdditive(SceneAsset scene)
+    public void LoadSceneAdditive()
     {
-        SceneManager.LoadScene(scene.name, LoadSceneMode.Additive);
+        FindObjectOfType<SceneLoader>().LoadScene(DefaultSceneParamter);
+        //LoadSceneAdditive(DefaultSceneParamter);
     }
 
-    public static bool IsSceneLoaded(SceneAsset scene)
+    public static void LoadSceneAdditive(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+    }
+
+    public static bool IsSceneLoaded(string sceneName)
     {
         for (int i = 0; i < SceneManager.sceneCount; i++)
         {
-            if (SceneManager.GetSceneByName(scene.name) == SceneManager.GetSceneAt(i))
+            if (("Assets/" + sceneName + ".unity") == SceneManager.GetSceneAt(i).path)
             {
                 return true;
             }

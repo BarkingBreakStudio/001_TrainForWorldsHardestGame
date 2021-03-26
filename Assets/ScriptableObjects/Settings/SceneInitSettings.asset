@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 421f24e041b4ec64a8654d0f38398ae0, type: 3}
   m_Name: SceneInitSettings
   m_EditorClassIdentifier: 
-  PersistentScene: {fileID: 102900000, guid: 9702964a6caa5ff4bb29b8ed9ed5f8d7, type: 3}
+  PersistentScene: Scenes/TheEasiestGame_Persistent
