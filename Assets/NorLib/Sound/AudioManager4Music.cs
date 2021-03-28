@@ -5,22 +5,22 @@ using UnityEngine;
 public class AudioManager4Music : MonoBehaviour
 {
 
-
+    public float MusicTransitionTime = 1f;
     [SerializeField]
     private int NumOfInitialTracks = 4;
     [SerializeField]
     private int NumOfMusicTracks = 0;
 
-    [System.Serializable]
-    struct MusicTrackState
+
+    private class MusicTrackState
     {
         public AudioSource source;
+        public bool VolumeIncreasing;
     }
 
     [SerializeField]
     private Queue<MusicTrackState> unusedTracks;
-    [SerializeField]
-    private MusicTrackState? activeTrack;
+    private MusicTrackState activeTrack;
     [SerializeField]
     private List<MusicTrackState> unloadTracks;
 
@@ -39,13 +39,15 @@ public class AudioManager4Music : MonoBehaviour
 
     public virtual void PlayMusic(AudioClip clip)
     {
+        if (activeTrack != null)
+        {
+            unloadTracks.Add(activeTrack);
+        }
+
         MusicTrackState track = ReserveTrack();
         track.source.clip = clip;
         track.source.Play();
-        if(activeTrack.HasValue)
-        {
-            unloadTracks.Add(activeTrack.Value);
-        }
+        track.VolumeIncreasing = true;
         activeTrack = track;
     }
 
@@ -69,6 +71,7 @@ public class AudioManager4Music : MonoBehaviour
         mts.source = gm.AddComponent<AudioSource>();
         mts.source.volume = 0;
         mts.source.loop = true;
+        mts.VolumeIncreasing = false;
         return mts;
     }
 
@@ -80,18 +83,29 @@ public class AudioManager4Music : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (activeTrack.HasValue)
+        if (activeTrack != null)
         {
-            if(activeTrack.Value.source.volume < 1.0f)
+            if (activeTrack.VolumeIncreasing)
             {
-                activeTrack.Value.source.volume += 0.0001f;
+                float Volume = activeTrack.source.volume + Time.deltaTime / MusicTransitionTime;
+                if (Volume < 1)
+                {
+                    activeTrack.source.volume = Volume;
+                }
+                else
+                {
+                    activeTrack.source.volume = 1;
+                    activeTrack.VolumeIncreasing = false;
+                }
             }
         }
         for (int i = unloadTracks.Count-1; i >= 0; i--)
         {
-            if(unloadTracks[i].source.volume > 0.01f)
+            float step = Time.deltaTime / MusicTransitionTime;
+            float volume = unloadTracks[i].source.volume;
+            if (volume > step)
             {
-                unloadTracks[i].source.volume -= 0.0001f;
+                unloadTracks[i].source.volume = volume - step;
             }
             else
             {
