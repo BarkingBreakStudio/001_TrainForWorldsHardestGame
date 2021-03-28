@@ -8,9 +8,7 @@ public class AudioManager : MonoBehaviour
 {
 
     GameObject MusicGo;
-    GameObject MusicSource1Go;
 
-    AudioSource MusicSource1;
 
     [Header("Debugging")]
     [SerializeField]
@@ -19,6 +17,9 @@ public class AudioManager : MonoBehaviour
     AudioClip backgroundMusic2;
 
     [Header("Music")]
+    [SerializeField]
+    private AudioManager4Music musicMgr;
+
     public AudioCueEventChannelSO MusicRequestChannel;
     public AudioMixerGroup MusicMixer;
 
@@ -28,12 +29,13 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        MusicGo = new GameObject("Music");
-        MusicGo.transform.parent = transform;
-
-        MusicSource1Go = new GameObject("Source1");
-        MusicSource1Go.transform.parent = MusicGo.transform;
-        MusicSource1 = MusicSource1Go.AddComponent<AudioSource>();
+        musicMgr = GetComponentInChildren<AudioManager4Music>();
+        if (musicMgr == null)
+        {
+            MusicGo = new GameObject("Music");
+            MusicGo.transform.parent = transform;
+            musicMgr = MusicGo.AddComponent<AudioManager4Music>();
+        }
     }
 
     // Start is called before the first frame update
@@ -80,7 +82,9 @@ public class AudioManager : MonoBehaviour
 
     void PlayMusic(AudioClip clip)
     {
-        MusicSource1.clip = clip;
-        MusicSource1.Play();
+        musicMgr.PlayMusic(clip);
     }
+    //MusicSource1.clip = clip;
+    //MusicSource1.Play();
+
 }
