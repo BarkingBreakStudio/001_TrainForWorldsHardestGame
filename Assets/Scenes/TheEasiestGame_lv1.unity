@@ -169,10 +169,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &27092178
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -328,10 +328,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!1 &65413159
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,10 +378,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &65413162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -487,10 +487,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!1 &95028473
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,10 +537,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &95028476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -649,10 +649,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &114744772
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -761,10 +761,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &124981154
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -873,10 +873,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &181251875
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -982,10 +982,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!1 &331573976
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,10 +1127,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &424949727
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1239,10 +1239,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &428137501
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1351,10 +1351,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &479156148
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1463,10 +1463,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &483274912
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1572,10 +1572,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!1 &598702347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,10 +1622,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &598702350
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1734,10 +1734,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &622559621
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1942,10 +1942,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &692658207
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2126,10 +2126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &699039597
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2235,10 +2235,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!1 &744254496
 GameObject:
   m_ObjectHideFlags: 0
@@ -2282,10 +2282,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!1 &750571312
 GameObject:
   m_ObjectHideFlags: 0
@@ -2332,10 +2332,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &750571315
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2441,10 +2441,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!1 &873637813
 GameObject:
   m_ObjectHideFlags: 0
@@ -2510,10 +2510,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!135 &873637817
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2618,7 +2618,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881543099}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: -2}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1460082237}
@@ -2636,10 +2636,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &881543102
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2748,10 +2748,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &887826376
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2857,10 +2857,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!1 &934561275
 GameObject:
   m_ObjectHideFlags: 0
@@ -2907,10 +2907,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &934561278
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3019,10 +3019,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &935450346
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3131,10 +3131,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &977764862
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3338,10 +3338,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &999758943
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3450,10 +3450,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &1040001024
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3626,10 +3626,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!114 &1061669897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3707,10 +3707,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &1072196862
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3819,10 +3819,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &1083637746
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3931,10 +3931,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &1093502956
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4043,10 +4043,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &1103857049
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4155,10 +4155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &1112470875
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4286,10 +4286,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!135 &1207728492
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4412,10 +4412,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &1219446730
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4524,10 +4524,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &1251298930
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4636,10 +4636,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &1264198673
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4767,10 +4767,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!135 &1270266493
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5073,10 +5073,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!1 &1296314436
 GameObject:
   m_ObjectHideFlags: 0
@@ -5142,10 +5142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!135 &1296314440
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5268,10 +5268,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &1300362765
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5362,7 +5362,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324804806}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1460082237}
@@ -5380,10 +5380,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &1324804809
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5474,7 +5474,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1337598975}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1460082237}
@@ -5554,10 +5554,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!1 &1348077594
 GameObject:
   m_ObjectHideFlags: 0
@@ -5601,10 +5601,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!1 &1386781443
 GameObject:
   m_ObjectHideFlags: 0
@@ -5648,10 +5648,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!1 &1387666956
 GameObject:
   m_ObjectHideFlags: 0
@@ -5717,10 +5717,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!135 &1387666960
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6110,10 +6110,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &1478351024
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6305,10 +6305,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &1517954846
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6414,10 +6414,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!1 &1577424312
 GameObject:
   m_ObjectHideFlags: 0
@@ -6483,10 +6483,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!135 &1577424316
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6606,10 +6606,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!1 &1603677884
 GameObject:
   m_ObjectHideFlags: 0
@@ -6656,10 +6656,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &1603677887
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6787,10 +6787,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!135 &1612760711
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6910,10 +6910,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!1 &1624346457
 GameObject:
   m_ObjectHideFlags: 0
@@ -6957,10 +6957,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!1 &1642920720
 GameObject:
   m_ObjectHideFlags: 0
@@ -7007,10 +7007,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &1642920723
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7138,10 +7138,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!135 &1646944006
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7283,10 +7283,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!135 &1657191742
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7409,10 +7409,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &1675266616
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7518,10 +7518,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!1 &1688032550
 GameObject:
   m_ObjectHideFlags: 0
@@ -7568,10 +7568,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &1688032553
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7680,10 +7680,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &1732216569
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7884,10 +7884,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!1 &1776364156
 GameObject:
   m_ObjectHideFlags: 0
@@ -7934,10 +7934,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &1776364159
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8046,10 +8046,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &1788440708
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8212,10 +8212,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!1 &1826634067
 GameObject:
   m_ObjectHideFlags: 0
@@ -8262,10 +8262,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &1826634070
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8371,10 +8371,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!1 &1860817463
 GameObject:
   m_ObjectHideFlags: 0
@@ -8421,10 +8421,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &1860817466
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8666,7 +8666,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006624220}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1460082237}
@@ -8684,10 +8684,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &2006624223
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8796,10 +8796,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &2029526485
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8908,10 +8908,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &2046069312
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9020,10 +9020,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1
 --- !u!65 &2050365711
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9129,7 +9129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGlobalGrid: 1
-  gridSize: {x: 1, y: 1, z: 1}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
+  gridSize: {x: 1, y: 2, z: 1}
   SnapRelativeToParent: 1
-  deactivateInPlayMode: 1
+  DeactivateInPlayMode: 1

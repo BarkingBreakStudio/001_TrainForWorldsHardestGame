@@ -1,56 +1,99 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Snap : MonoBehaviour
 {
 
-    static Vector3? s_globalGridSize = null;
-    Vector3 localGridSize = Vector3.one;
+    public SnapSO SnapSettings;
+    SnapSO old_SnapSettings;
+    static SnapSO last_SnapSettings;
 
-    [SerializeField]
-    bool useGlobalGrid = true;
-    bool old_useGlobalGrid;
     [SerializeField]
     Vector3 gridSize;
+    Vector3 old_gridSize;
     [SerializeField]
     bool SnapRelativeToParent = true;
+    bool old_SnapRelativeToParent = true;
     [SerializeField]
-    bool deactivateInPlayMode = true;
+    bool DeactivateInPlayMode = true;
+    bool old_DeactivateInPlayMode = true;
 
-    //write to Gridsite
-    Vector3? oldGridSize = null;
+
+
 
     private void OnDrawGizmos()
     {
-        if (Application.isPlaying && deactivateInPlayMode)
+        if (Application.isPlaying && DeactivateInPlayMode)
             return;
 
+        if (!Application.isPlaying && SnapSettings == null)
+        {
+            if (last_SnapSettings == null)
+            {
+                string[] guids = AssetDatabase.FindAssets("t:SnapSO");
+                if (guids.Length > 0)
+                {
+                    string path = AssetDatabase.GUIDToAssetPath(guids[0]);
+                    SnapSettings = AssetDatabase.LoadAssetAtPath<SnapSO>(path);
+                    last_SnapSettings = SnapSettings;
+                    old_SnapSettings = SnapSettings;
+                }
+                else
+                {
+                    SnapSettings = last_SnapSettings;
+                    old_SnapSettings = SnapSettings;
+                }
+            }
+            
+        }
+
+        if(SnapSettings != null)
+        {
+            GridSize = SnapSettings.GridSize;
+            old_gridSize = GridSize;
+            SnapRelativeToParent = SnapSettings.SnapRelativeToParent;
+            old_SnapRelativeToParent = SnapRelativeToParent;
+            DeactivateInPlayMode = SnapSettings.DeactivateInPlayMode;
+            old_DeactivateInPlayMode = DeactivateInPlayMode;
+        }
+        
         SnapToGrid();
-        Debug.Log("OnDrawGizmos");
     }
 
     private void OnValidate()
     {
-        Debug.Log("OnValidate");
-        if (old_useGlobalGrid == useGlobalGrid)
+        if(old_gridSize != GridSize)
         {
-            if (oldGridSize != null && oldGridSize != gridSize)
+            if (SnapSettings != null)
             {
-                Debug.Log("Override");
-                GridSize = gridSize;
+                SnapSettings.GridSize = GridSize;
+                old_gridSize = GridSize;
             }
         }
-        old_useGlobalGrid = useGlobalGrid;
-        gridSize = GridSize;
+        if (old_SnapRelativeToParent != SnapRelativeToParent)
+        {
+            if(SnapSettings != null)
+            {
+                SnapSettings.SnapRelativeToParent = SnapRelativeToParent;
+                old_SnapRelativeToParent = SnapRelativeToParent;
+            }
+        }
+        if (old_DeactivateInPlayMode != DeactivateInPlayMode)
+        {
+            if (SnapSettings != null)
+            {
+                SnapSettings.DeactivateInPlayMode = DeactivateInPlayMode;
+                old_DeactivateInPlayMode = DeactivateInPlayMode;
+            }
+        }
     }
 
     void SnapToGrid()
     {
         Vector3 pos = SnapRelativeToParent ? transform.localPosition : transform.position;
         Vector3 grid = GridSize;
-        oldGridSize = GridSize;
-        old_useGlobalGrid = useGlobalGrid;
         Vector3 newPosition = Vector3.Scale(grid , new Vector3(Mathf.Round(pos.x / grid.x), Mathf.Round(pos.y / grid.y), Mathf.Round(pos.z / grid.z)));
         if (SnapRelativeToParent)
             transform.localPosition = newPosition;
@@ -63,55 +106,21 @@ public class Snap : MonoBehaviour
 
     public Vector3 GridSize
     {
-        get => useGlobalGrid ? GlobalGridSize : localGridSize;
+        get
+        {
+            float min = 0.00001f;
+            return Vector3.Max(gridSize, new Vector3(min, min, min));
+
+        }
         set
         {
             if (value.x > 0.00001 && value.y > 0.00001 && value.z > 0.00001)
             {
-                if (useGlobalGrid)
-                    GlobalGridSize = value;
-                else
-                    localGridSize = value;
+                gridSize = value;
             }
         }
     }
 
-    public Vector3 GlobalGridSize
-    {
-        get
-        {
-            if(s_globalGridSize.HasValue)
-            {
-                return s_globalGridSize.Value;
-            }
-            else
-            {
-                /*string data = UnityEditor.EditorPrefs.GetString("globalGridSize", "");
-                if(data != "")
-                {
-                    s_globalGridSize = JsonUtility.FromJson<Vector3>(data);
-                }
-                else
-                {
-                    s_globalGridSize = Vector3.one;
-                }
-                return s_globalGridSize.Value;*/
-                return Vector3.one;
-            }
-        }
-        set
-        {
-            if(value != s_globalGridSize)
-            {
-                s_globalGridSize = value;
-                //UnityEditor.EditorPrefs.SetString("globalGridSize", JsonUtility.ToJson(s_globalGridSize));
-            }
-        }
-    }
 
-    private void OnEnable()
-    {
-        Debug.Log("OnEnable");
-    }
 }
 
