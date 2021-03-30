@@ -7,25 +7,19 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
 
-    GameObject MusicGo;
-
-
-    [Header("Debugging")]
-    [SerializeField]
-    AudioClip backgroundMusic1;
-    [SerializeField]
-    AudioClip backgroundMusic2;
-
     [Header("Music")]
     [SerializeField]
     private AudioManager4Music musicMgr;
-
     public AudioCueEventChannelSO MusicRequestChannel;
     public AudioMixerGroup MusicMixer;
+    private GameObject MusicGo;
 
     [Header("Sound Effect")]
+    [SerializeField]
+    private AudioManager4Sfx SfxMgr;
     public AudioCueEventChannelSO SfxRequestChannel;
     public AudioMixerGroup SfxMixer;
+    private GameObject SfxGo;
 
     private void Awake()
     {
@@ -35,6 +29,14 @@ public class AudioManager : MonoBehaviour
             MusicGo = new GameObject("Music");
             MusicGo.transform.parent = transform;
             musicMgr = MusicGo.AddComponent<AudioManager4Music>();
+        }
+
+        SfxMgr = GetComponentInChildren<AudioManager4Sfx>();
+        if (SfxMgr == null)
+        {
+            SfxGo = new GameObject("Sfx");
+            SfxGo.transform.parent = transform;
+            SfxMgr = SfxGo.AddComponent<AudioManager4Sfx>();
         }
     }
 
@@ -55,36 +57,22 @@ public class AudioManager : MonoBehaviour
         PlayMusic(audioRequest.clip);
     }
 
-    private void onSfxRequestChannel(AudioCueEventChannelSO.AudioCueReqest arg0)
+    private void onSfxRequestChannel(AudioCueEventChannelSO.AudioCueReqest audioRequest)
     {
-        throw new NotImplementedException();
+        PlaySfx(audioRequest.clip);
     }
 
- 
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    [ContextMenu("PlayMusic1")]
-    void PlayMusic1()
-    {
-        PlayMusic(backgroundMusic1);
-    }
-
-    [ContextMenu("PlayMusic2")]
-    void PlayMusic2()
-    {
-        PlayMusic(backgroundMusic2);
-    }
 
     void PlayMusic(AudioClip clip)
     {
         musicMgr.PlayMusic(clip);
     }
-    //MusicSource1.clip = clip;
-    //MusicSource1.Play();
+
+    void PlaySfx(AudioClip clip)
+    {
+        SfxMgr.PlayMusic(clip);
+    }
+
+
 
 }

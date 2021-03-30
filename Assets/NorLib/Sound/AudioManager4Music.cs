@@ -7,7 +7,7 @@ public class AudioManager4Music : MonoBehaviour
 
     public float MusicTransitionTime = 1f;
     [SerializeField]
-    private int NumOfInitialTracks = 4;
+    private int NumOfInitialTracks = 2;
     [SerializeField]
     private int NumOfMusicTracks = 0;
 
@@ -71,6 +71,7 @@ public class AudioManager4Music : MonoBehaviour
         mts.source = gm.AddComponent<AudioSource>();
         mts.source.volume = 0;
         mts.source.loop = true;
+        mts.source.playOnAwake = false;
         mts.VolumeIncreasing = false;
         return mts;
     }
