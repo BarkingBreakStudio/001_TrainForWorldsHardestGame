@@ -26,7 +26,7 @@ public class SceneLoader : MonoBehaviour
         switch (request.reqType)
         {
             case SceneLoaderSO.ReqType.loadScene:
-                LoadScene(request.scene);
+                StartCoroutine(LoadScene(request.scene));
             break;
         }
     }
@@ -38,7 +38,7 @@ public class SceneLoader : MonoBehaviour
     }
 
 
-    public void LoadScene(string sceneName)
+    public IEnumerator LoadScene(string sceneName)
     {
         List<string> ScenesToDesroy = new List<string>();
 
@@ -53,10 +53,11 @@ public class SceneLoader : MonoBehaviour
 
         foreach (var scene in ScenesToDesroy)
         {
-            SceneManager.UnloadSceneAsync(scene);
+            yield return SceneManager.UnloadSceneAsync(scene);
         }
 
-        SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+        yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+        SceneManager.SetActiveScene(SceneManager.GetSceneByPath(sceneName));
     }
 
 
