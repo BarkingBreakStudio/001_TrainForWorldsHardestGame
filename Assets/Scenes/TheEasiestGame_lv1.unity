@@ -998,6 +998,7 @@ GameObject:
   - component: {fileID: 331573980}
   - component: {fileID: 331573979}
   - component: {fileID: 331573978}
+  - component: {fileID: 331573981}
   m_Layer: 0
   m_Name: edge1 (2)
   m_TagString: Untagged
@@ -1081,6 +1082,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331573976}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &331573981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331573976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e0350bbd3db0bd43a8cde4bdfe4e676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EvtColliderEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  EvtColliderEnterGo:
+    m_PersistentCalls:
+      m_Calls: []
+  EvtColliderLeave:
+    m_PersistentCalls:
+      m_Calls: []
+  EvtColliderLeaveGo:
+    m_PersistentCalls:
+      m_Calls: []
+  TagFilter: []
 --- !u!1 &424949724
 GameObject:
   m_ObjectHideFlags: 0
@@ -3197,6 +3223,73 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977764859}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &985038431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 985038434}
+  - component: {fileID: 985038433}
+  m_Layer: 0
+  m_Name: PlayLevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &985038433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985038431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0231a02f2c219cf409224cf557d1f9e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelEvents: {fileID: 11400000, guid: 50dec7b6ffb0a1d45ae88093c775ab64, type: 2}
+  OnPlayerDead:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: BaseEventTransmitter`2[[BaseEventChannelSO`1[[SceneLoaderSO+SceneLoaderReqest,
+          Assembly-CSharp
+        m_MethodName: TransmitEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  SceneLoaderChannel: {fileID: 11400000, guid: 5044ccdf5fb5a0146ace2dd3bda1811c, type: 2}
+  reloadScene:
+    scene: Assets/Scenes/TheEasiestGame_lv1.unity
+    reqType: 0
+  LoadNextScene:
+    scene: Assets/Scenes/TheEasiestGame_lv2.unity
+    reqType: 0
+--- !u!4 &985038434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985038431}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &990270534
 GameObject:
   m_ObjectHideFlags: 0
@@ -3209,6 +3302,7 @@ GameObject:
   - component: {fileID: 990270538}
   - component: {fileID: 990270537}
   - component: {fileID: 990270536}
+  - component: {fileID: 990270539}
   m_Layer: 0
   m_Name: edge1 (1)
   m_TagString: Untagged
@@ -3292,6 +3386,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 990270534}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &990270539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990270534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e0350bbd3db0bd43a8cde4bdfe4e676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EvtColliderEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  EvtColliderEnterGo:
+    m_PersistentCalls:
+      m_Calls: []
+  EvtColliderLeave:
+    m_PersistentCalls:
+      m_Calls: []
+  EvtColliderLeaveGo:
+    m_PersistentCalls:
+      m_Calls: []
+  TagFilter: []
 --- !u!1 &999758940
 GameObject:
   m_ObjectHideFlags: 0
@@ -4862,6 +4981,8 @@ GameObject:
   - component: {fileID: 1291328783}
   - component: {fileID: 1291328784}
   - component: {fileID: 1291328786}
+  - component: {fileID: 1291328787}
+  - component: {fileID: 1291328788}
   - component: {fileID: 1291328785}
   m_Layer: 0
   m_Name: Player
@@ -4988,10 +5109,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1291328778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 313cae24c3f74d34792c35e0d5a8e4da, type: 3}
+  m_Script: {fileID: 11500000, guid: f0e9ed368fb5bfe4f8d3c94fdc1bef67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultSceneParamter: 
+  channel: {fileID: 11400000, guid: 50dec7b6ffb0a1d45ae88093c775ab64, type: 2}
+  defaultObject: 
 --- !u!114 &1291328786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5008,8 +5130,22 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1291328785}
-        m_TargetAssemblyTypeName: SceneManagerEx, Assembly-CSharp
-        m_MethodName: ReloadScene
+        m_TargetAssemblyTypeName: BaseEventTransmitter`2[[BaseEventChannelSO`1[[System.String,
+          mscorlib
+        m_MethodName: TransmitEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: PlayerDead
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1291328787}
+        m_TargetAssemblyTypeName: BaseEventTransmitter`2[[BaseEventChannelSO`1[[AudioCueEventChannelSO+AudioCueReqest,
+          Assembly-CSharp
+        m_MethodName: TransmitEvent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5030,6 +5166,33 @@ MonoBehaviour:
       m_Calls: []
   TagFilter:
   - FireBall
+--- !u!114 &1291328787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291328778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97511f445bfeabe4b815ad54bbef0696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: {fileID: 11400000, guid: ff6d751e51a2d794186bf5eef89a8ead, type: 2}
+  defaultObject:
+    clip: {fileID: 8300000, guid: 0281fa7f64e14a141afcdd0344a12d05, type: 3}
+--- !u!114 &1291328788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291328778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac66aa0d6992214ea0f5b2107a66ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1293455057
 GameObject:
   m_ObjectHideFlags: 0
@@ -5809,6 +5972,7 @@ GameObject:
   - component: {fileID: 1440191440}
   - component: {fileID: 1440191439}
   - component: {fileID: 1440191438}
+  - component: {fileID: 1440191441}
   m_Layer: 0
   m_Name: edge1
   m_TagString: Untagged
@@ -5892,6 +6056,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440191436}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1440191441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440191436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e0350bbd3db0bd43a8cde4bdfe4e676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EvtColliderEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  EvtColliderEnterGo:
+    m_PersistentCalls:
+      m_Calls: []
+  EvtColliderLeave:
+    m_PersistentCalls:
+      m_Calls: []
+  EvtColliderLeaveGo:
+    m_PersistentCalls:
+      m_Calls: []
+  TagFilter: []
 --- !u!1 &1458673500
 GameObject:
   m_ObjectHideFlags: 0
@@ -7758,6 +7947,7 @@ GameObject:
   - component: {fileID: 1741414130}
   - component: {fileID: 1741414129}
   - component: {fileID: 1741414128}
+  - component: {fileID: 1741414131}
   m_Layer: 0
   m_Name: edge1 (3)
   m_TagString: Untagged
@@ -7841,6 +8031,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741414126}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1741414131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741414126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e0350bbd3db0bd43a8cde4bdfe4e676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EvtColliderEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  EvtColliderEnterGo:
+    m_PersistentCalls:
+      m_Calls: []
+  EvtColliderLeave:
+    m_PersistentCalls:
+      m_Calls: []
+  EvtColliderLeaveGo:
+    m_PersistentCalls:
+      m_Calls: []
+  TagFilter: []
 --- !u!1 &1767864001
 GameObject:
   m_ObjectHideFlags: 0
@@ -8500,6 +8715,7 @@ GameObject:
   - component: {fileID: 1970406558}
   - component: {fileID: 1970406557}
   - component: {fileID: 1970406556}
+  - component: {fileID: 1970406555}
   - component: {fileID: 1970406561}
   m_Layer: 6
   m_Name: Goal
@@ -8508,6 +8724,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1970406555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970406554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0e9ed368fb5bfe4f8d3c94fdc1bef67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: {fileID: 11400000, guid: 50dec7b6ffb0a1d45ae88093c775ab64, type: 2}
+  defaultObject: PlayerGoal
 --- !u!114 &1970406556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8523,8 +8753,21 @@ MonoBehaviour:
   EvtColliderEnter:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1970406555}
+        m_TargetAssemblyTypeName: BaseEventTransmitter`2[[BaseEventChannelSO`1[[System.String,
+          mscorlib
+        m_MethodName: TransmitEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1970406561}
-        m_TargetAssemblyTypeName: BaseEventTransmitter`2[[BaseEventChannelSO`1[[SceneLoaderSO+SceneLoaderReqest,
+        m_TargetAssemblyTypeName: BaseEventTransmitter`2[[BaseEventChannelSO`1[[AudioCueEventChannelSO+AudioCueReqest,
           Assembly-CSharp
         m_MethodName: TransmitEvent
         m_Mode: 1
@@ -8631,13 +8874,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1970406554}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc9b4652a67497442809dcb6c3503f50, type: 3}
+  m_Script: {fileID: 11500000, guid: 97511f445bfeabe4b815ad54bbef0696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  channel: {fileID: 11400000, guid: 5044ccdf5fb5a0146ace2dd3bda1811c, type: 2}
+  channel: {fileID: 11400000, guid: ff6d751e51a2d794186bf5eef89a8ead, type: 2}
   defaultObject:
-    scene: Assets/Scenes/TheEasiestGame_lv2.unity
-    reqType: 0
+    clip: {fileID: 8300000, guid: f122a18a4f013164ea99069b09e09e56, type: 3}
 --- !u!1 &2006624220
 GameObject:
   m_ObjectHideFlags: 0

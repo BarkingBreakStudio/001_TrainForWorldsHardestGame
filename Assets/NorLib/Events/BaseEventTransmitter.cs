@@ -17,4 +17,9 @@ public class BaseEventTransmitter<T,U> : MonoBehaviour where T : BaseEventChanne
     {
         channel.RaiseEvent(paramObj);
     }
+
+    public void SetChannel(T channel)
+    {
+        this.channel = channel;
+    }
 }

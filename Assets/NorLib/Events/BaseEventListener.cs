@@ -26,8 +26,15 @@ public class BaseEventListener<T,U> : MonoBehaviour where T : BaseEventChannelSO
 
 	public void SetChannel(T channel)
 	{
-		OnDisable();
-		_channel = channel;
-		OnEnable();
+		if (enabled)
+		{
+			OnDisable();
+			_channel = channel;
+			OnEnable();
+		}
+		else
+        {
+			_channel = channel;
+		}
 	}
 }

@@ -7,12 +7,10 @@ using UnityEngine.SceneManagement;
 public class SceneManagerEx : MonoBehaviour
 {
 
-    [SceneNamePicker]
-    public string DefaultSceneParamter;
 
     public static void ReloadScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex,LoadSceneMode.Additive);
     }
 
 
