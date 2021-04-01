@@ -231,10 +231,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicMgr: {fileID: 0}
   MusicRequestChannel: {fileID: 11400000, guid: 8bc35e335d7a95b458a7e9160424b2d0, type: 2}
-  MusicMixer: {fileID: 0}
+  MusicMixer: {fileID: 465809025730996478, guid: 1153f5aa3023f6d4292aa544bfe3a286, type: 2}
   SfxMgr: {fileID: 0}
   SfxRequestChannel: {fileID: 11400000, guid: ff6d751e51a2d794186bf5eef89a8ead, type: 2}
-  SfxMixer: {fileID: 0}
+  SfxMixer: {fileID: 2266071798022600869, guid: 1153f5aa3023f6d4292aa544bfe3a286, type: 2}
 --- !u!4 &1882090531
 Transform:
   m_ObjectHideFlags: 0

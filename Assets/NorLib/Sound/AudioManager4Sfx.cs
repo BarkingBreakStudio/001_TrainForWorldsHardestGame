@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager4Sfx : MonoBehaviour
 {
@@ -9,13 +10,16 @@ public class AudioManager4Sfx : MonoBehaviour
     private int NumOfInitialTracks = 4;
     [SerializeField]
     private int NumOfMusicTracks = 0;
+    [SerializeField]
+    private AudioMixerGroup audioMixerGrp;
 
     Queue<AudioSource> unusedTracks = new Queue<AudioSource>();
     List<AudioSource> activeTracks = new List<AudioSource>();
+    
 
     private void Awake()
     {
-        
+
         for (int i = 0; i < NumOfInitialTracks; i++)
         {
             unusedTracks.Enqueue(CreateNewTrack());
@@ -49,18 +53,31 @@ public class AudioManager4Sfx : MonoBehaviour
         gm.transform.parent = transform;
         AudioSource source = gm.AddComponent<AudioSource>();
         source.playOnAwake = false;
+        source.outputAudioMixerGroup = audioMixerGrp;
         return source;
     }
 
     void Update()
     {
-        for (int i = activeTracks.Count-1; i >= 0; i--)
+        for (int i = activeTracks.Count - 1; i >= 0; i--)
         {
             if (!activeTracks[i].isPlaying)
             {
                 unusedTracks.Enqueue(activeTracks[i]);
                 activeTracks.RemoveAt(i);
-            }            
+            }
+        }
+    }
+
+    public void SetAudioMixerGrp(AudioMixerGroup grp)
+    {
+        audioMixerGrp = grp;
+        var allTracks = new List<AudioSource>();
+        allTracks.AddRange(unusedTracks);
+        allTracks.AddRange(activeTracks);
+        foreach (var track in allTracks)
+        {
+            track.outputAudioMixerGroup = grp;
         }
     }
 }

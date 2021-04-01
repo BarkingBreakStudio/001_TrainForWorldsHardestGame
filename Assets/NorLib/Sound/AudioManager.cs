@@ -29,6 +29,7 @@ public class AudioManager : MonoBehaviour
             MusicGo = new GameObject("Music");
             MusicGo.transform.parent = transform;
             musicMgr = MusicGo.AddComponent<AudioManager4Music>();
+            musicMgr.SetAudioMixerGrp(MusicMixer);
         }
 
         SfxMgr = GetComponentInChildren<AudioManager4Sfx>();
@@ -37,6 +38,7 @@ public class AudioManager : MonoBehaviour
             SfxGo = new GameObject("Sfx");
             SfxGo.transform.parent = transform;
             SfxMgr = SfxGo.AddComponent<AudioManager4Sfx>();
+            SfxMgr.SetAudioMixerGrp(SfxMixer);
         }
     }
 

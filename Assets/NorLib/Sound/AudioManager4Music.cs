@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager4Music : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class AudioManager4Music : MonoBehaviour
     private int NumOfInitialTracks = 2;
     [SerializeField]
     private int NumOfMusicTracks = 0;
-
+    [SerializeField] AudioMixerGroup audioMixerGrp;
 
     private class MusicTrackState
     {
@@ -41,6 +42,9 @@ public class AudioManager4Music : MonoBehaviour
     {
         if (activeTrack != null)
         {
+            if (clip = activeTrack.source.clip)
+                return;//same music is already plaing
+
             unloadTracks.Add(activeTrack);
         }
 
@@ -73,6 +77,7 @@ public class AudioManager4Music : MonoBehaviour
         mts.source.loop = true;
         mts.source.playOnAwake = false;
         mts.VolumeIncreasing = false;
+        mts.source.outputAudioMixerGroup = audioMixerGrp;
         return mts;
     }
 
@@ -115,6 +120,22 @@ public class AudioManager4Music : MonoBehaviour
                 unusedTracks.Enqueue(unloadTracks[i]);
                 unloadTracks.RemoveAt(i);
             }
+        }
+    }
+
+    public void SetAudioMixerGrp(AudioMixerGroup grp)
+    {
+        audioMixerGrp = grp;
+        var allTracks = new List<MusicTrackState>();
+        allTracks.AddRange(unusedTracks);
+        allTracks.AddRange(unloadTracks);
+        if(activeTrack!=null)
+        {
+            allTracks.Add(activeTrack);
+        }
+        foreach (var track in allTracks)
+        {
+            track.source.outputAudioMixerGroup = grp;
         }
     }
 }

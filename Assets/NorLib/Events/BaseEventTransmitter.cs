@@ -7,7 +7,10 @@ public class BaseEventTransmitter<T,U> : MonoBehaviour where T : BaseEventChanne
     [SerializeField] private T channel = default;
     [SerializeField] private U defaultObject = default;
 
-    [ContextMenu("Transmit Event")]
+    [Header("Start up")]
+    [SerializeField] bool transmitOnStart = false;
+    [SerializeField] float startDelay = 0.0f;
+
     public void TransmitEvent()
     {
         channel.RaiseEvent(defaultObject);
@@ -21,5 +24,24 @@ public class BaseEventTransmitter<T,U> : MonoBehaviour where T : BaseEventChanne
     public void SetChannel(T channel)
     {
         this.channel = channel;
+    }
+
+    protected virtual void Start()
+    {
+        if(transmitOnStart)
+        {
+            if(startDelay > float.Epsilon)
+            {
+                StartCoroutine(ExecuteAfterTime(startDelay));
+            }
+            TransmitEvent();
+        }
+    }
+
+    IEnumerator ExecuteAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        TransmitEvent();
     }
 }
