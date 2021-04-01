@@ -42,8 +42,11 @@ public class AudioManager4Music : MonoBehaviour
     {
         if (activeTrack != null)
         {
-            if (clip = activeTrack.source.clip)
-                return;//same music is already plaing
+            if (clip == activeTrack.source.clip)
+            {
+                Debug.Log("This Track is already playing");
+                return;
+            }
 
             unloadTracks.Add(activeTrack);
         }

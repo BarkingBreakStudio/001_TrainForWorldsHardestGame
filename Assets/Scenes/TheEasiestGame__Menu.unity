@@ -257,6 +257,8 @@ MonoBehaviour:
   channel: {fileID: 11400000, guid: 8bc35e335d7a95b458a7e9160424b2d0, type: 2}
   defaultObject:
     clip: {fileID: 8300000, guid: 13930b6c5eaaa7b48a0bdd719b10cc98, type: 3}
+  transmitOnStart: 0
+  startDelay: 0
 --- !u!114 &382505536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,6 +409,8 @@ MonoBehaviour:
   channel: {fileID: 11400000, guid: ff6d751e51a2d794186bf5eef89a8ead, type: 2}
   defaultObject:
     clip: {fileID: 8300000, guid: f122a18a4f013164ea99069b09e09e56, type: 3}
+  transmitOnStart: 0
+  startDelay: 0
 --- !u!114 &545990654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -874,6 +878,8 @@ MonoBehaviour:
   channel: {fileID: 11400000, guid: ff6d751e51a2d794186bf5eef89a8ead, type: 2}
   defaultObject:
     clip: {fileID: 8300000, guid: 0281fa7f64e14a141afcdd0344a12d05, type: 3}
+  transmitOnStart: 0
+  startDelay: 0
 --- !u!114 &1194303682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1101,7 +1107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 313cae24c3f74d34792c35e0d5a8e4da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultSceneParamter: undefined
 --- !u!114 &1369009721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1213,6 +1218,56 @@ MonoBehaviour:
   defaultObject:
     scene: Assets/Scenes/TheEasiestGame_lv1.unity
     reqType: 0
+  transmitOnStart: 0
+  startDelay: 0
+--- !u!1 &1387683387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1387683389}
+  - component: {fileID: 1387683388}
+  m_Layer: 0
+  m_Name: BackgroundMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1387683388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387683387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97511f445bfeabe4b815ad54bbef0696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: {fileID: 11400000, guid: 8bc35e335d7a95b458a7e9160424b2d0, type: 2}
+  defaultObject:
+    clip: {fileID: 8300000, guid: 13930b6c5eaaa7b48a0bdd719b10cc98, type: 3}
+  transmitOnStart: 1
+  startDelay: 0.1
+--- !u!4 &1387683389
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387683387}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1477255976
 GameObject:
   m_ObjectHideFlags: 0
@@ -1546,6 +1601,8 @@ MonoBehaviour:
   channel: {fileID: 11400000, guid: 8bc35e335d7a95b458a7e9160424b2d0, type: 2}
   defaultObject:
     clip: {fileID: 8300000, guid: 34ca9f90beb244b45857e0db4c59d5f4, type: 3}
+  transmitOnStart: 0
+  startDelay: 0
 --- !u!1 &1977090075
 GameObject:
   m_ObjectHideFlags: 0
