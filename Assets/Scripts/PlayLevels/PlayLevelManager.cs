@@ -54,7 +54,7 @@ public class PlayLevelManager : MonoBehaviour
                 }
                 break;
             case "PlayerGoal":
-                if (state == e_state.playing)
+                if (state == e_state.playing && GameObject.FindGameObjectWithTag("Coin") == null)
                 {
                     state = e_state.gameWon;
                     sceneLoaderTrans.TransmitEvent(LoadNextScene);

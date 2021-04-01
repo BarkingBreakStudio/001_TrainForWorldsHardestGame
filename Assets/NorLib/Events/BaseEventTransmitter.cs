@@ -30,11 +30,14 @@ public class BaseEventTransmitter<T,U> : MonoBehaviour where T : BaseEventChanne
     {
         if(transmitOnStart)
         {
-            if(startDelay > float.Epsilon)
+            if (startDelay > float.Epsilon)
             {
                 StartCoroutine(ExecuteAfterTime(startDelay));
             }
-            TransmitEvent();
+            else
+            {
+                TransmitEvent();
+            }
         }
     }
 
