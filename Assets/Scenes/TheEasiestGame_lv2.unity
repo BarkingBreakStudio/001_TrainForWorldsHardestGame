@@ -2008,7 +2008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SnapSettings: {fileID: 0}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
   gridSize: {x: 1, y: 1, z: 1}
   SnapRelativeToParent: 1
   DeactivateInPlayMode: 1
@@ -2134,7 +2134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SnapSettings: {fileID: 0}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
   gridSize: {x: 1, y: 1, z: 1}
   SnapRelativeToParent: 1
   DeactivateInPlayMode: 1
@@ -2210,6 +2210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 928503980}
   - component: {fileID: 928503979}
+  - component: {fileID: 928503981}
   m_Layer: 0
   m_Name: PlayLevelManager
   m_TagString: Untagged
@@ -2267,6 +2268,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &928503981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928503978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97511f445bfeabe4b815ad54bbef0696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: {fileID: 11400000, guid: ff6d751e51a2d794186bf5eef89a8ead, type: 2}
+  defaultObject:
+    clip: {fileID: 8300000, guid: f122a18a4f013164ea99069b09e09e56, type: 3}
+  transmitOnStart: 0
+  startDelay: 0
 --- !u!1 &934561275
 GameObject:
   m_ObjectHideFlags: 0
@@ -2886,7 +2904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SnapSettings: {fileID: 0}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
   gridSize: {x: 1, y: 1, z: 1}
   SnapRelativeToParent: 1
   DeactivateInPlayMode: 1
@@ -3210,7 +3228,7 @@ GameObject:
   - component: {fileID: 1257996088}
   m_Layer: 0
   m_Name: Player (1)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3635,7 +3653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SnapSettings: {fileID: 0}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
   gridSize: {x: 1, y: 1, z: 1}
   SnapRelativeToParent: 1
   DeactivateInPlayMode: 1
@@ -3873,7 +3891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SnapSettings: {fileID: 0}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
   gridSize: {x: 1, y: 1, z: 1}
   SnapRelativeToParent: 1
   DeactivateInPlayMode: 1
@@ -4047,7 +4065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SnapSettings: {fileID: 0}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
   gridSize: {x: 1, y: 1, z: 1}
   SnapRelativeToParent: 1
   DeactivateInPlayMode: 1
@@ -4065,7 +4083,6 @@ GameObject:
   - component: {fileID: 1373728132}
   - component: {fileID: 1373728131}
   - component: {fileID: 1373728130}
-  - component: {fileID: 1373728129}
   m_Layer: 6
   m_Name: Goal
   m_TagString: Untagged
@@ -4073,23 +4090,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1373728129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1373728128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97511f445bfeabe4b815ad54bbef0696, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  channel: {fileID: 11400000, guid: ff6d751e51a2d794186bf5eef89a8ead, type: 2}
-  defaultObject:
-    clip: {fileID: 8300000, guid: f122a18a4f013164ea99069b09e09e56, type: 3}
-  transmitOnStart: 0
-  startDelay: 0
 --- !u!114 &1373728130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4124,19 +4124,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1373728130}
         m_TargetAssemblyTypeName: BaseEventTransmitter`2[[BaseEventChannelSO`1[[System.String,
           mscorlib
-        m_MethodName: TransmitEvent
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1373728129}
-        m_TargetAssemblyTypeName: BaseEventTransmitter`2[[BaseEventChannelSO`1[[AudioCueEventChannelSO+AudioCueReqest,
-          Assembly-CSharp
         m_MethodName: TransmitEvent
         m_Mode: 1
         m_Arguments:
@@ -5059,7 +5046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SnapSettings: {fileID: 0}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
   gridSize: {x: 1, y: 1, z: 1}
   SnapRelativeToParent: 1
   DeactivateInPlayMode: 1
@@ -5365,7 +5352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SnapSettings: {fileID: 0}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
   gridSize: {x: 1, y: 1, z: 1}
   SnapRelativeToParent: 1
   DeactivateInPlayMode: 1
@@ -5862,7 +5849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SnapSettings: {fileID: 0}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
   gridSize: {x: 1, y: 1, z: 1}
   SnapRelativeToParent: 1
   DeactivateInPlayMode: 1
