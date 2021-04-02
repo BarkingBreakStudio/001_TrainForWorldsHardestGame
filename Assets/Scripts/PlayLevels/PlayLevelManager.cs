@@ -33,9 +33,7 @@ public class PlayLevelManager : MonoBehaviour
 
     private void Awake()
     {
-        strEvtListener = gameObject.AddComponent<StringEventListener>();
-        strEvtListener.OnEventRaised.AddListener(LevelEventHappened);
-        strEvtListener.SetChannel(LevelEvents);
+        strEvtListener = StringEventListener.AddComponent(gameObject, LevelEvents, LevelEventHappened);
 
         sceneLoaderTrans = gameObject.AddComponent<SceneLoaderEventTransmitter>();
         sceneLoaderTrans.SetChannel(SceneLoaderChannel);

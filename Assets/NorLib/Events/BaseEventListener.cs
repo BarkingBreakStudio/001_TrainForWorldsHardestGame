@@ -37,4 +37,14 @@ public class BaseEventListener<T,U> : MonoBehaviour where T : BaseEventChannelSO
 			_channel = channel;
 		}
 	}
+
+
+	public static V AddComponent<V>(GameObject gm, T channel, UnityAction<U> action) where V : BaseEventListener<T, U>
+	{
+		V listener  = gm.AddComponent<V>();
+		listener.OnEventRaised.AddListener(action);
+		listener.SetChannel(channel);
+		return listener;
+	}
+
 }
