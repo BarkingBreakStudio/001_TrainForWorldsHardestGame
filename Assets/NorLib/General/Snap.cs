@@ -28,6 +28,7 @@ public class Snap : MonoBehaviour
         if (Application.isPlaying && DeactivateInPlayMode)
             return;
 
+#if UNITY_EDITOR
         if (!Application.isPlaying && SnapSettings == null)
         {
             if (last_SnapSettings == null)
@@ -46,8 +47,8 @@ public class Snap : MonoBehaviour
                     old_SnapSettings = SnapSettings;
                 }
             }
-            
         }
+#endif
 
         if(SnapSettings != null)
         {
