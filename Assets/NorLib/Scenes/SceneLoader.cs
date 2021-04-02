@@ -12,6 +12,7 @@ public class SceneLoader : MonoBehaviour
     public SceneLoaderSO SceneLoaderRequestChannel;
     private SceneLoaderEventListener SceneLoaderListerner;
 
+    public Animator CrossFadeAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,7 @@ public class SceneLoader : MonoBehaviour
 
     public IEnumerator LoadScene(string sceneName)
     {
+        Physics.autoSimulation = false;
         List<string> ScenesToDesroy = new List<string>();
 
         for (int i = 0; i < SceneManager.sceneCount; i++)
@@ -51,6 +53,8 @@ public class SceneLoader : MonoBehaviour
             }
         }
 
+        yield return StartCrossFade();
+
         foreach (var scene in ScenesToDesroy)
         {
             yield return SceneManager.UnloadSceneAsync(scene);
@@ -58,6 +62,26 @@ public class SceneLoader : MonoBehaviour
 
         yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
         SceneManager.SetActiveScene(SceneManager.GetSceneByPath(sceneName));
+
+        ContinueCrossFade();
+        Physics.autoSimulation = true;
+    }
+
+    public IEnumerator StartCrossFade()
+    {
+        if(CrossFadeAnimator != null)
+        {
+            CrossFadeAnimator.SetTrigger("StartCrossFade");
+            yield return new WaitForSeconds(1);
+        }
+    }
+
+    public void ContinueCrossFade()
+    {
+        if (CrossFadeAnimator != null)
+        {
+            CrossFadeAnimator.SetTrigger("ContinueCrossFade");
+        }
     }
 
 
