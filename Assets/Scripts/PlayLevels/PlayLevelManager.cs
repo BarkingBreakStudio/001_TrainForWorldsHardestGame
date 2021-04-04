@@ -22,6 +22,8 @@ public class PlayLevelManager : MonoBehaviour
     [SerializeField]
     private  SceneLoaderSO.SceneLoaderReqest LoadNextScene;
 
+    public string LevelName = "unknownSceneName";
+
     enum e_state
     {
         playing,
@@ -37,6 +39,7 @@ public class PlayLevelManager : MonoBehaviour
 
         sceneLoaderTrans = gameObject.AddComponent<SceneLoaderEventTransmitter>();
         sceneLoaderTrans.SetChannel(SceneLoaderChannel);
+
     }
 
     private void LevelEventHappened(string evt)
