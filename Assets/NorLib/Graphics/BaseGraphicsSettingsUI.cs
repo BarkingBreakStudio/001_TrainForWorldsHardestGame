@@ -7,14 +7,21 @@ using UnityEngine.UI;
 public class BaseGraphicsSettingsUI : MonoBehaviour
 {
 
-    public Button Refresh;
-    public Toggle toggleFullscreen;
-    public Dropdown dropdownQuality;
-    public Slider sliderVolumeMaster;
-    public AudioMixer AudioMix;
+    [Header("Monitor")]   
     public Dropdown dropdownResolutions;
+    public Toggle toggleFullscreen;
     public Dropdown dropdownVSyncCount;
     public InputField inputFieldFpsLimit;
+
+    [Header("Graphics")]
+    public Dropdown dropdownQuality;
+
+    [Header("Audio")]
+    public AudioMixer AudioMixer;
+    public Slider sliderVolumeMaster;
+
+    [Header("Others")]
+    public Button Refresh;
 
     private BaseGraphicsSettings graphicSettings;
 
@@ -36,51 +43,67 @@ public class BaseGraphicsSettingsUI : MonoBehaviour
 
     public void RefreshOptions()
     {
-        toggleFullscreen.isOn = graphicSettings.IsFullscreen();
+        if(toggleFullscreen)
+            toggleFullscreen.isOn = graphicSettings.IsFullscreen();
 
-        List<Dropdown.OptionData> options = new List<Dropdown.OptionData>();
-        foreach (var qualityName in graphicSettings.GetQualitySettingNames())
+        if (dropdownQuality)
         {
-            options.Add(new Dropdown.OptionData(qualityName));
-        }
-        dropdownQuality.options = options;
-        dropdownQuality.value = graphicSettings.GetQualitySettingLevel();
-     
-
-        float volume;
-        if (AudioMix.GetFloat("Master_Volume", out volume))
-        {
-            sliderVolumeMaster.value = Mathf.Pow(10, volume / 20);
+            var options = new List<Dropdown.OptionData>();
+            foreach (var qualityName in graphicSettings.GetQualitySettingNames())
+            {
+                options.Add(new Dropdown.OptionData(qualityName));
+            }
+            dropdownQuality.options = options;
+            dropdownQuality.value = graphicSettings.GetQualitySettingLevel();
         }
 
-        options = new List<Dropdown.OptionData>();
-        var resolutions = new List<Vector2Int>(graphicSettings.GetScreenResolutions());
-        foreach (var resolution in resolutions)
+        if (sliderVolumeMaster)
         {
-            options.Add(new Dropdown.OptionData(Rest2String(resolution)));
+            float volume;
+            if (AudioMixer.GetFloat("Master_Volume", out volume))
+            {
+                sliderVolumeMaster.value = Mathf.Pow(10, volume / 20);
+                sliderVolumeMaster.minValue = 0.0001f;
+            }
         }
-        Vector2Int curResolution = graphicSettings.GetCurrentScreen();
-        Dropdown.OptionData curOption = new Dropdown.OptionData(Rest2String(curResolution));
-        int index = resolutions.IndexOf(curResolution);
-        if (index == -1)
-        {
-            options.Add(curOption);
-            resolutions.Add(curResolution);
-            index = options.Count - 1;
-        }
-        dropdownResolutions.options = options;
-        ScreenResolutions = resolutions.ToArray();
-        dropdownResolutions.value = index;
 
-        options = new List<Dropdown.OptionData>();
-        for (int i = 0; i <= 4; i++)
+        if (dropdownResolutions)
         {
-            options.Add(new Dropdown.OptionData("Vsync " + i));
+            var options = new List<Dropdown.OptionData>();
+            var resolutions = new List<Vector2Int>(graphicSettings.GetScreenResolutions());
+            foreach (var resolution in resolutions)
+            {
+                options.Add(new Dropdown.OptionData(Rest2String(resolution)));
+            }
+            Vector2Int curResolution = graphicSettings.GetCurrentScreen();
+            Dropdown.OptionData curOption = new Dropdown.OptionData(Rest2String(curResolution));
+            int index = resolutions.IndexOf(curResolution);
+            if (index == -1)
+            {
+                options.Add(curOption);
+                resolutions.Add(curResolution);
+                index = options.Count - 1;
+            }
+            dropdownResolutions.options = options;
+            ScreenResolutions = resolutions.ToArray();
+            dropdownResolutions.value = index;
         }
-        dropdownVSyncCount.options = options;
-        dropdownVSyncCount.value = QualitySettings.vSyncCount;
 
-        inputFieldFpsLimit.text = graphicSettings.GetFrameLimit().ToString();
+        if (dropdownVSyncCount)
+        {
+            var options = new List<Dropdown.OptionData>();
+            for (int i = 0; i <= 4; i++)
+            {
+                options.Add(new Dropdown.OptionData("Vsync " + i));
+            }
+            dropdownVSyncCount.options = options;
+            dropdownVSyncCount.value = QualitySettings.vSyncCount;
+        }
+
+        if (inputFieldFpsLimit)
+        {
+            inputFieldFpsLimit.text = graphicSettings.GetFrameLimit().ToString();
+        }
     }
 
     private void resolutionValueChanged(int index)
@@ -99,13 +122,13 @@ public class BaseGraphicsSettingsUI : MonoBehaviour
 
     public void InitCallBacks()
     {
-        toggleFullscreen.onValueChanged.AddListener(fullscreenValueChanged);
-        dropdownQuality.onValueChanged.AddListener(qualitySettingsChanged);
-        sliderVolumeMaster.onValueChanged.AddListener(masterVolumeValueChnaged);
-        dropdownResolutions.onValueChanged.AddListener(resolutionValueChanged);
-        dropdownVSyncCount.onValueChanged.AddListener(vSyncValueChanged);
-        inputFieldFpsLimit.onValueChanged.AddListener(fpsLimitValueChanged);
-        Refresh.onClick.AddListener(RefreshButtonPressed);
+        toggleFullscreen?.onValueChanged.AddListener(fullscreenValueChanged);
+        dropdownQuality?.onValueChanged.AddListener(qualitySettingsChanged);
+        sliderVolumeMaster?.onValueChanged.AddListener(masterVolumeValueChnaged);
+        dropdownResolutions?.onValueChanged.AddListener(resolutionValueChanged);
+        dropdownVSyncCount?.onValueChanged.AddListener(vSyncValueChanged);
+        inputFieldFpsLimit?.onValueChanged.AddListener(fpsLimitValueChanged);
+        Refresh?.onClick.AddListener(RefreshButtonPressed);
     }
 
     private void fpsLimitValueChanged(string text)
@@ -125,18 +148,18 @@ public class BaseGraphicsSettingsUI : MonoBehaviour
 
     public void RemoveCallbacks()
     {
-        toggleFullscreen.onValueChanged.RemoveListener(fullscreenValueChanged);
-        dropdownQuality.onValueChanged.RemoveListener(qualitySettingsChanged);
-        sliderVolumeMaster.onValueChanged.RemoveListener(masterVolumeValueChnaged);
-        dropdownResolutions.onValueChanged.RemoveListener(resolutionValueChanged);
-        dropdownVSyncCount.onValueChanged.RemoveListener(vSyncValueChanged);
-        inputFieldFpsLimit.onValueChanged.RemoveListener(fpsLimitValueChanged);
-        Refresh.onClick.RemoveListener(RefreshButtonPressed);
+        toggleFullscreen?.onValueChanged.RemoveListener(fullscreenValueChanged);
+        dropdownQuality?.onValueChanged.RemoveListener(qualitySettingsChanged);
+        sliderVolumeMaster?.onValueChanged.RemoveListener(masterVolumeValueChnaged);
+        dropdownResolutions?.onValueChanged.RemoveListener(resolutionValueChanged);
+        dropdownVSyncCount?.onValueChanged.RemoveListener(vSyncValueChanged);
+        inputFieldFpsLimit?.onValueChanged.RemoveListener(fpsLimitValueChanged);
+        Refresh?.onClick.RemoveListener(RefreshButtonPressed);
     }
 
     private void masterVolumeValueChnaged(float value)
     {
-        AudioMix.SetFloat("Master_Volume", Mathf.Log10(value) * 20);
+        AudioMixer.SetFloat("Master_Volume", Mathf.Log10(value) * 20);
     }
 
     private void qualitySettingsChanged(int value)
