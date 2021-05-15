@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
+using System.Text;
+using System.Threading;
 using System.Xml.Linq;
 using UnityEngine;
 
@@ -12,7 +15,7 @@ public class SaveSystem
 
     //public interfacce
 
-    public static FileType DefaultFileType = new JsonFile();
+    public static FileType DefaultFileType = new JsonHrFile();
 
     /// <summary>
     /// Save Object of type T in a file
@@ -65,8 +68,6 @@ public class SaveSystem
         string saveDirectory = GetSaveGameDirectory();
         return Directory.GetDirectories(saveDirectory).Select(d => new DirectoryInfo(d).Name).ToArray();
     }
-
-    //priavte functions
 
     private static string GetSaveGameDirectory()
     {
@@ -172,6 +173,84 @@ public class SaveSystem
                 {
                     var deserializer = new DataContractSerializer(typeof(T));
                     return deserializer.ReadObject(reader, false) as T;
+                }
+            }
+            return null;
+
+        }
+    }
+
+
+    //Json human readable
+    public class JsonHrFile : FileType
+    {
+        public readonly DataContractJsonSerializerSettings Settings =
+           new DataContractJsonSerializerSettings
+           { UseSimpleDictionaryFormat = true };
+
+        public override string GetFileExtension()
+        {
+            return ".json";
+        }
+
+        public override void SaveObject<T>(string key, T data, string savefolder)
+        {
+            string filePath = savefolder + key + GetFileExtension();
+
+
+            using (var stream = File.Create(filePath))
+            {
+                var currentCulture = Thread.CurrentThread.CurrentCulture;
+                Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+
+                try
+                {
+                    using (var writer = JsonReaderWriterFactory.CreateJsonWriter(
+                        stream, Encoding.UTF8, true, true, "  "))
+                    {
+                        var serializer = new DataContractJsonSerializer(typeof(T), Settings);
+                        serializer.WriteObject(writer, data);
+                        writer.Flush();
+                    }
+                }
+                catch (System.Exception exception)
+                {
+                    Debug.LogError(exception.ToString());
+                }
+                finally
+                {
+                    Thread.CurrentThread.CurrentCulture = currentCulture;
+                }
+            }
+
+        }
+
+        public override T LoadObject<T>(string key, string savefolder)
+        {
+            string filePath = savefolder + key + GetFileExtension();
+
+            if (File.Exists(filePath))
+            {
+
+                using (var stream = File.OpenRead(filePath))
+                {
+                    var currentCulture = Thread.CurrentThread.CurrentCulture;
+                    Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+
+                    try
+                    {
+                        var serializer = new DataContractJsonSerializer(typeof(T), Settings);
+                        var item = serializer.ReadObject(stream) as T;
+                        return item;
+                    }
+                    catch (System.Exception exception)
+                    {
+                        Debug.LogError(exception.ToString());
+                    }
+                    finally
+                    {
+                        Thread.CurrentThread.CurrentCulture = currentCulture;
+                    }
                 }
             }
             return null;
