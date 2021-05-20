@@ -4573,12 +4573,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149608938}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d2d736a5a25bfa43a1a7e27dbf3ca3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartOnStart: 1
   elapsedTime: 0
 --- !u!4 &1149608940
 Transform:
@@ -5367,9 +5366,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   channel: {fileID: 11400000, guid: 50dec7b6ffb0a1d45ae88093c775ab64, type: 2}
-  defaultObject: 
-  transmitOnStart: 0
-  startDelay: 0
+  defaultObject: PlayerStart
+  transmitOnStart: 1
+  startDelay: 0.1
 --- !u!114 &1291328786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6633,6 +6632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7f7e30db7f0e0749960088afd087217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: 
 --- !u!1 &1478351021
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,12 +22,27 @@ public class GameManager : MonoBehaviour
     {
         switch (evt)
         {
-            case "PlayerGoal":
-                LevelTimeWatch watch = FindObjectOfType<LevelTimeWatch>();
+            case "PlayerStart":
+                LevelTimeWatch watch = FindObjectOfType<LevelTimeWatch>(true);
                 PlayLevelManager lvlManager = FindObjectOfType<PlayLevelManager>();
+                if (watch != null && lvlManager != null)
+                {
+                    if (playerStasts.ContainsKey(lvlManager.LevelName))
+                    {
+                        watch.ElapsedTime = playerStasts[lvlManager.LevelName];
+                    }
+                    watch.enabled = true;
+                }
+                break;
+
+            case "PlayerGoal":
+            case "PlayerDead":
+                watch = FindObjectOfType<LevelTimeWatch>(true);
+                lvlManager = FindObjectOfType<PlayLevelManager>();
                 if(watch != null && lvlManager != null)
                 {
                     playerStasts[lvlManager.LevelName] = watch.ElapsedTime;
+                    watch.enabled = false;
                 }
                 break;
         }

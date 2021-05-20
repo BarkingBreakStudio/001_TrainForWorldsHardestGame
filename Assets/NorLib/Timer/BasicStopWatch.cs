@@ -5,7 +5,6 @@ using UnityEngine;
 public class BasicStopWatch : MonoBehaviour
 {
 
-    public bool StartOnStart = true;
 
     [SerializeField]
     float elapsedTime;
@@ -13,11 +12,7 @@ public class BasicStopWatch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        elapsedTime = 0;
-        if(!StartOnStart)
-        {
-            enabled = false;
-        }
+
     }
 
     // Update is called once per frame
@@ -36,6 +31,10 @@ public class BasicStopWatch : MonoBehaviour
         get
         {
             return elapsedTime;
+        }
+        set
+        {
+            elapsedTime = value;
         }
     } 
 }

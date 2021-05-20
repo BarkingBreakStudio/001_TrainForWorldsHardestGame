@@ -9,11 +9,15 @@ public class PlayLevelScore : MonoBehaviour
     Text textScore;
     LevelTimeWatch watch;
 
+    public string text;
+
     // Start is called before the first frame update
     void Start()
     {
         textScore = GetComponent<Text>();
         watch = FindObjectOfType<LevelTimeWatch>();
+
+        text = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
     }
 
     // Update is called once per frame
