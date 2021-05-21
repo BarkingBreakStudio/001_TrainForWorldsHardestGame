@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TheEasiestGame_lv3.unity
     guid: 9d7330d6c5a32b54d819ec88bfe60d03
   - enabled: 1
+    path: Assets/Scenes/TheEasiestGame_lv4.unity
+    guid: 6bede2d06f68d474b90ff332559953cf
+  - enabled: 1
     path: Assets/Scenes/TheEasiestGame__GameOver.unity
     guid: b4109c86fc9b0134abacf4e26aff0725
   m_configObjects: {}
