@@ -9435,7 +9435,7 @@ MonoBehaviour:
   LoadNextScene:
     scene: Assets/Scenes/TheEasiestGame__GameOver.unity
     reqType: 0
-  LevelName: Level 3
+  LevelName: Level 4
 --- !u!4 &928503980
 Transform:
   m_ObjectHideFlags: 0
@@ -13107,7 +13107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436aa58e54c9de545886fc3de37323b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SnapSettings: {fileID: 0}
+  SnapSettings: {fileID: 11400000, guid: 43492fbf1a46edb4889b368ccb696a4f, type: 2}
   gridSize: {x: 1, y: 1, z: 1}
   SnapRelativeToParent: 1
   DeactivateInPlayMode: 1
