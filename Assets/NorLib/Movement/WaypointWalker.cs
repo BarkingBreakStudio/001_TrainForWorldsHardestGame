@@ -6,7 +6,10 @@ using UnityEngine.Events;
 public class WaypointWalker : MonoBehaviour
 {
     public Transform currentTargetPosition = null;
-    private float movespeed = 3f;
+    
+    public float MoveSpeed { get { return _movespeed; } set { _movespeed = value; } }
+    [SerializeField]
+    private float _movespeed = 3f;
 
     private Queue<Transform> moveTargets = new Queue<Transform>();
 
@@ -23,7 +26,7 @@ public class WaypointWalker : MonoBehaviour
     {
         if (currentTargetPosition != null)
         {
-            float maxDistance = Time.deltaTime * movespeed;
+            float maxDistance = Time.deltaTime * MoveSpeed;
             Vector3 oldPosition = transform.position;
             transform.position = (Vector3.MoveTowards(transform.position, currentTargetPosition.position, maxDistance));
             Vector3 newPosition = transform.position;

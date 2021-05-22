@@ -13,6 +13,18 @@ public class GameManager : MonoBehaviour
     [Header("Score")]
     public Dictionary<string, float> playerStasts = new Dictionary<string, float>();
 
+
+    //Difficulty settings
+    public enum Difficulty
+    {
+        Easy = 1,
+        Medium = 2,
+        Hard = 3,
+    }
+
+    public Difficulty DifficultySelected = Difficulty.Easy;
+
+
     private void Awake()
     {
         LevelEvtListener = StringEventListener.AddComponent(gameObject, LevelEvents, LevelEventHappened);
@@ -33,6 +45,12 @@ public class GameManager : MonoBehaviour
                     }
                     watch.enabled = true;
                 }
+
+                foreach (var difScaler in FindObjectsOfType<DifficultyScaler>())
+                {
+                    difScaler.CallDifficultyActions(DifficultySelected);
+                }
+
                 break;
 
             case "PlayerGoal":
