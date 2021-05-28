@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public Dictionary<string, float> playerStasts = new Dictionary<string, float>();
 
 
+
     //Difficulty settings
     public enum Difficulty
     {
@@ -25,15 +26,34 @@ public class GameManager : MonoBehaviour
     public Difficulty DifficultySelected = Difficulty.Easy;
 
 
+    //Highscores:
+    [Serializable]
+    public class HighScoreData
+    {
+        public string PlayerName;
+        public float TotalTime;
+        public Difficulty Difficulty;
+    }
+
+
+    public List<HighScoreData> HighScoreDataList = new List<HighScoreData>();
+
+
     private void Awake()
     {
         LevelEvtListener = StringEventListener.AddComponent(gameObject, LevelEvents, LevelEventHappened);
+        HighScoreDataList = SaveSystem.LoadObject<List<HighScoreData>>("HighScoreData") ?? new List<HighScoreData>();
     }
 
     private void LevelEventHappened(string evt)
     {
         switch (evt)
         {
+            case "NewGame":
+                playerStasts = new Dictionary<string, float>();
+                Debug.Log("NewGame");
+
+                break;
             case "PlayerStart":
                 LevelTimeWatch watch = FindObjectOfType<LevelTimeWatch>(true);
                 PlayLevelManager lvlManager = FindObjectOfType<PlayLevelManager>();
@@ -69,6 +89,7 @@ public class GameManager : MonoBehaviour
     public string GettPlayerScore()
     {
         string s_score = "";
+        s_score += "total" + " : " + CalcPlayerStastsTotal().ToString("N1") + "s" + Environment.NewLine;
         foreach (var playerScore in playerStasts)
         {
             s_score += playerScore.Key + " : " + playerScore.Value.ToString("N1") + "s" + Environment.NewLine;
@@ -76,6 +97,45 @@ public class GameManager : MonoBehaviour
         return s_score;
     }
 
+    public void SaveCurrentStatsInHighScore(string playername)
+    {
+        HighScoreDataList.Add(new HighScoreData() { PlayerName = playername , Difficulty = DifficultySelected, TotalTime = CalcPlayerStastsTotal() });
+        SaveSystem.SaveObject<List<HighScoreData>>("HighScoreData", HighScoreDataList);
+    }
+
+    public float CalcPlayerStastsTotal()
+    {
+        float total = 0;
+        foreach (var stat in playerStasts.Values)
+        {
+            total += stat;
+        }
+        return total;
+    }
+
+
+    public string GetHighScoreText()
+    {
+        string s_hscore = "";
+        foreach (var ScoreDate in HighScoreDataList)
+        {
+            if(ScoreDate.Difficulty == DifficultySelected)
+            {
+                s_hscore += ScoreDate.PlayerName + " : " + ScoreDate.TotalTime.ToString("N1") + "s" + Environment.NewLine;
+            }
+            
+        }
+
+        if(s_hscore != "")
+        {
+            return s_hscore;
+        }
+        else
+        {
+            return "add yourself to the list";
+        }
+        
+    }
 
     // Start is called before the first frame update
     void Start()
