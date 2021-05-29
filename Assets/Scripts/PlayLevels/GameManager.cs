@@ -28,11 +28,16 @@ public class GameManager : MonoBehaviour
 
     //Highscores:
     [Serializable]
-    public class HighScoreData
+    public class HighScoreData : IComparable<HighScoreData>
     {
         public string PlayerName;
         public float TotalTime;
         public Difficulty Difficulty;
+
+        public int CompareTo(HighScoreData other)
+        {
+            return this.TotalTime.CompareTo(other.TotalTime);
+        }
     }
 
 
@@ -77,7 +82,7 @@ public class GameManager : MonoBehaviour
             case "PlayerDead":
                 watch = FindObjectOfType<LevelTimeWatch>(true);
                 lvlManager = FindObjectOfType<PlayLevelManager>();
-                if(watch != null && lvlManager != null)
+                if(watch != null && lvlManager != null && (evt == "PlayerDead" || GameObject.FindGameObjectWithTag("Coin") == null))
                 {
                     playerStasts[lvlManager.LevelName] = watch.ElapsedTime;
                     watch.enabled = false;
@@ -103,6 +108,13 @@ public class GameManager : MonoBehaviour
         SaveSystem.SaveObject<List<HighScoreData>>("HighScoreData", HighScoreDataList);
     }
 
+    [ContextMenu("DeleteHighScore")]
+    public void DeleteHighScore()
+    {
+        HighScoreDataList = new List<HighScoreData>();
+        SaveSystem.SaveObject<List<HighScoreData>>("HighScoreData", HighScoreDataList);
+    }
+
     public float CalcPlayerStastsTotal()
     {
         float total = 0;
@@ -117,6 +129,7 @@ public class GameManager : MonoBehaviour
     public string GetHighScoreText()
     {
         string s_hscore = "";
+        HighScoreDataList.Sort(); //sort high scores by time
         foreach (var ScoreDate in HighScoreDataList)
         {
             if(ScoreDate.Difficulty == DifficultySelected)
