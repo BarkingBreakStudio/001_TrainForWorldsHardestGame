@@ -221,7 +221,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1000
   m_TargetDisplay: 0
 --- !u!224 &320722068
 RectTransform:
@@ -503,6 +503,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelEvents: {fileID: 11400000, guid: 50dec7b6ffb0a1d45ae88093c775ab64, type: 2}
+  DifficultySelected: 1
+  HighScoreDataList: []
 --- !u!4 &1757984279
 Transform:
   m_ObjectHideFlags: 0
